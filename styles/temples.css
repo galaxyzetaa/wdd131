@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    /* padding: .5rem .75rem; */
+    text-decoration: none;
+    /*background-color: rgb(92, 87, 87);*/
+    color: white;
+}
+
+#menu::before {
+    content:"☰"
+}
+
+.show {
+    display: block;
+} 
+
+#menu.show::before{ 
+    content: "✗";
+}
+
+.menu-links {
+    display: none;
+}
+
+.menu-links.show {
+    display: flex;
+    flex-direction: column;
+    top: 6rem;
+    right: 0.5rem;
+    left: 0.5rem;
+    width: auto;
+    align-items: center;
+    position:absolute;
+    text-align: center;
+    background-color: #afafb1;
+    padding: 0 1rem;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-links a:hover {
+    background: #8683af;
+    color: #DCE0D9;
+}
+body {
+    font-family: "Lora", serif; 
+    background-color: rgb(224, 217, 217) ;
+}
+
+header {
+    background-color: #b9afaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 30px #252525;
+    font-family: "Sedan SC", serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1400px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px; 
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #b9afaf;
+    padding: 20px;
+    text-align: center; 
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .menu-links {
+        display: none;
+    }
+}
