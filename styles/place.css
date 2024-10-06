@@ -1,0 +1,50 @@
+:root{
+    --header-footer-color: rgb(197, 181, 136);
+    --main-color: rgb(209, 202, 176);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--header-footer-color);
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+}
+
+body{
+    text-align: center;
+    background-color: var(--main-color);
+    margin: 0 auto;
+}
+
+h1{
+    font-family: "Oswald", serif; 
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px; 
+}
+
+h2{
+font-family: "Reddit Sans", serif; 
+background-color: var(--main-color);
+text-align: center;
+margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+#weather b::after {
+    content: "  ";
+    position: absolute;
+    right: 10px;
+}
