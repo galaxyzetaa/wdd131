@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="This is the WDD131 product review form assignment.">
+    <meta name="author" content="Oriana Hernandez">
+    <link href="styles/form.css" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+       
+        <div class="container">
+            
+            <h1>Product Review</h1>
+            <form method="get" action="review.html" class="reviewForm">
+   
+            <div class="section">
+                    <label> Product Name (REQUIRED)</label>
+                        <select name="product" id="product-name" required>
+                            <option value="" disabled selected>Choose a Product...</option>
+                        </select>
+            </div>
+              
+            <div class="section">
+                <label>Overall Rating (REQUIRED)</label>
+                <div id="rating">
+                    <input type="radio" id="5star" name="rating" value="5" required><label for="5star">☆☆☆☆☆</label>
+                    <input type="radio" id="4star" name="rating" value="4" required><label for="4star">☆☆☆☆</label>
+                    <input type="radio" id="3star" name="rating" value="3" required><label for="3star">☆☆☆</label>
+                    <input type="radio" id="2star" name="rating" value="2" required><label for="2star">☆☆</label>
+                    <input type="radio" id="1star" name="rating" value="1" required><label for="1star">☆</label>
+                </div>
+            </div>
+
+
+            <div class="section">
+                    <label>Date of Installation (REQUIRED)</label>
+                        <input id="date" type="date" name="completeDate" required>
+            </div>
+
+            <div class="section">
+                    <label> Which features did you find useful in the product? Check all that apply.</label> 
+                        <label><input type="checkbox" id="durability" name="feature" value="durability">Durability</label>
+                        <label><input type="checkbox" id="ease-of-use" name="feature" value="ease-of-use">Ease of Use</label>
+                        <label><input type="checkbox" id="performance" name="feature" value="performance">Performance</label>
+                        <label><input type="checkbox" id="design" name="feature" value="design">Design</label>
+            </div>
+
+            <div class="section">
+                    <label for="review">Written Review (Optional)</label>
+                       <textarea id="review" name="review"></textarea>
+            </div>
+
+            <div class="section">
+                    <label for="userName">Your Name (Optional)</label>
+                      <input type="text" id="userName" name="name">
+            </div>
+
+            <div class="section">
+                    <input type="submit" value="Post Review">
+            </div>
+
+            </form>
+        </div>
+    </main>
+     <footer>
+            <nav class="footer">
+                <p> <p>&copy;<span id="currentYear"></span> | Oriana Hernandez | Guarico, Venezuela</p>
+                <p id="lastModified"></p>
+            </nav>
+    </footer>
+
+</body>
+</html>
